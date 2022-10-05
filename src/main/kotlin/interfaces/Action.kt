@@ -1,11 +1,9 @@
-package records
+package interfaces
 
-interface action {
+import users.User
+import records.Record
 
-    fun addRecord()
-
-    fun removeRecord()
-
-    fun editRecord()
-
+interface Action {
+    fun addRecord(user: User, record: Record)
+    fun removeRecord(user: User, record: Record)
 }
